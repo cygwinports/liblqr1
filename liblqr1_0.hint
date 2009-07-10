@@ -1,0 +1,8 @@
+category: Graphics
+requires: libgcc1 libglib2.0_0
+external-source: liblqr1
+sdesc: "Liquid Rescale library (runtime)"
+ldesc: "This is the Liquid Rescale library, which provides an 
+implementation of the Seam Carving algorithm. The Seam Carving procedure 
+aims at resizing pictures non uniformly while preserving their features, 
+i.e. avoiding distortion of the important parts."

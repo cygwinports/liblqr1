@@ -1,0 +1,87 @@
+liblqr1
+------------------------------------------
+This is the Liquid Rescale library, which provides an implementation of 
+the Seam Carving algorithm. The Seam Carving procedure aims at resizing 
+pictures non uniformly while preserving their features, i.e. avoiding 
+distortion of the important parts.
+
+Runtime requirements:
+  cygwin-1.7.0-50
+  libgcc1-4.3.2-2
+  libglib2.0_0-2.20.4-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-10
+  automake1.10-1.10.2-10
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-2
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
+  sed-4.1.5-2
+
+Canonical website:
+  http://liblqr.wikidot.com/
+
+Canonical download:
+  http://liblqr.wikidot.com/en:download-page
+
+-------------------------------------------
+
+Build instructions:
+  unpack liblqr1-0.4.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./liblqr1-0.4.1-X.cygport all
+
+This will create:
+  /usr/src/liblqr1-0.4.1-X-src.tar.bz2
+  /usr/src/liblqr1-devel-0.4.1-X.tar.bz2
+  /usr/src/liblqr1_0-0.4.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(liblqr1_0)
+  /usr/bin/cyglqr-1-0.dll
+  /usr/share/doc/liblqr1/AUTHORS
+  /usr/share/doc/liblqr1/COPYING
+  /usr/share/doc/liblqr1/ChangeLog
+  /usr/share/doc/liblqr1/NEWS
+  /usr/share/doc/liblqr1/README
+  /usr/share/doc/liblqr1/TODO
+
+(liblqr1-devel)
+  /usr/include/lqr-1/lqr.h
+  /usr/include/lqr-1/lqr/lqr_base.h
+  /usr/include/lqr-1/lqr/lqr_carver_bias_pub.h
+  /usr/include/lqr-1/lqr/lqr_carver_list_pub.h
+  /usr/include/lqr-1/lqr/lqr_carver_pub.h
+  /usr/include/lqr-1/lqr/lqr_carver_rigmask_pub.h
+  /usr/include/lqr-1/lqr/lqr_cursor_pub.h
+  /usr/include/lqr-1/lqr/lqr_energy_pub.h
+  /usr/include/lqr-1/lqr/lqr_gradient_pub.h
+  /usr/include/lqr-1/lqr/lqr_progress_pub.h
+  /usr/include/lqr-1/lqr/lqr_rwindow_pub.h
+  /usr/include/lqr-1/lqr/lqr_vmap_list_pub.h
+  /usr/include/lqr-1/lqr/lqr_vmap_pub.h
+  /usr/lib/liblqr-1.dll.a
+  /usr/lib/liblqr-1.la
+  /usr/lib/pkgconfig/lqr-1.pc
+
+------------------
+
+Port Notes:
+
+----- version 0.4.1-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

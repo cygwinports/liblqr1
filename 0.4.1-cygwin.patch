@@ -1,0 +1,34 @@
+Win32 is used only for '-no-undefined' and dllexport instead of 
+visibility attributes.
+
+--- origsrc/liblqr-1-0.4.1/configure.ac	2009-05-11 18:34:52.000000000 -0500
++++ src/liblqr-1-0.4.1/configure.ac	2009-07-09 19:10:03.510888900 -0500
+@@ -149,7 +149,7 @@ AS_IF([test "x$declspec" = "xfalse"],
+ AC_MSG_CHECKING([[if we are on Win32]])
+ AC_LANG([C])
+ AC_PREPROC_IFELSE([[
+-		   #ifndef WIN32
++		   #if !defined(WIN32) && !defined(__CYGWIN__)
+ 		   #errrrrrrrrorrrrr
+ 		   #endif
+ 		   ]],
+--- origsrc/liblqr-1-0.4.1/lqr/lqr_base.h	2009-05-11 18:20:04.000000000 -0500
++++ src/liblqr-1-0.4.1/lqr/lqr_base.h	2009-07-09 19:12:25.363062000 -0500
+@@ -25,7 +25,7 @@
+ 
+ #define LQR_MAX_NAME_LENGTH (1024)
+ 
+-#if defined(G_OS_WIN32) && ! defined(LQR_DISABLE_DECLSPEC)
++#if defined(G_PLATFORM_WIN32) && ! defined(LQR_DISABLE_DECLSPEC)
+ #  ifdef LQR_EXPORTS
+ #    define LQR_PUBLIC __declspec(dllexport)
+ #  else
+@@ -42,7 +42,7 @@
+ #  endif /* GCC_HASCLASSVISIBILITY */
+ #else
+ #  define LQR_PUBLIC
+-#endif /* G_OS_WIN32 */
++#endif /* G_PLATFORM_WIN32 */
+ 
+ #if 0
+ #define __LQR_DEBUG__
