@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="liblqr1"
-VERSION=0.4.1
+VERSION=0.4.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Liquid Rescale library"
@@ -12,7 +12,10 @@ avoiding distortion of the important parts."
 HOMEPAGE="http://liblqr.wikidot.com/"
 SRC_URI="http://liblqr.wikidot.com/local--files/en:download-page/liblqr-1-${VERSION}.tar.bz2"
 SRC_DIR="liblqr-1-${VERSION}"
-PATCH_URI="0.4.1-cygwin.patch"
+PATCH_URI="
+	0.4.1-cygwin.patch
+	0.4.2-automake113.patch
+"
 
 PKG_NAMES="${NAME}_0 ${NAME}-devel"
 liblqr1_0_CONTENTS="usr/bin/cyglqr-1-0.dll usr/share/doc/"

@@ -1,0 +1,14 @@
+/usr/share/automake-1.13/am/ltlibrary.am:
+warning: 'liblqr-1.la': linking libtool libraries using a non-POSIX archiver
+requires 'AM_PROG_AR' in 'configure.ac'
+
+--- origsrc/liblqr-1-0.4.2/configure.ac	2013-09-09 00:39:03.507822100 -0500
++++ src/liblqr-1-0.4.2/configure.ac	2013-09-09 00:41:18.906566400 -0500
+@@ -74,6 +74,7 @@ AC_C_INLINE
+ AC_C_VOLATILE
+ 
+ AC_DISABLE_STATIC
++AM_PROG_AR
+ LT_INIT([win32-dll])
+ 
+ ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
